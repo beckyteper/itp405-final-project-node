@@ -38,7 +38,9 @@ app.post('/all-active-tasks', function(request, response) {
     title: request.body.title,
     body: request.body.body,
     due_date: request.body.due_date,
-    user_id: request.body.user_id
+    user_id: request.body.user_id,
+    created_at: request.body.created_at,
+    updated_at: request.body.updated_at
   });
 
   activeTask.save().then(function() {
